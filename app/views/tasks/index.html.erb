@@ -1,2 +1,13 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<%= link_to("HomePage", root_path) %>
+
+<% if @page == 5 %>
+<h2> Task List </h2>
+<% end %>
+
+
+<h1>Available tasks</h1>
+<ul>
+<% @tasks.each do |task| %>
+<li> <%= task %> </li>
+<% end %>
+</ul>
